@@ -1,0 +1,15 @@
+#first stage
+FROM golang:1.19-alpine AS builder
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go build -o /app main.go
+
+#second stage
+FROM scratch
+
+COPY --from=builder /app /app
+
+CMD ["/app"]
