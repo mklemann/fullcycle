@@ -46,4 +46,16 @@ export default class Product {
         return this._price;
     }
 
+    get id(): string { 
+        return this._id;
+    }
+
+    set name(name: string) {
+        this._name = name;
+    }
+
+    set price(price: number) {
+        this._price = price;
+    }
+
 }

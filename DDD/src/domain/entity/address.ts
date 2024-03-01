@@ -35,4 +35,20 @@ export default class Address {
     findZip(): string {
         return this._zip
     }
+
+    get street(): string {
+        return this._street;
+    }
+
+    get city(): string {
+        return this._city;
+    }
+
+    get state(): string {
+        return this._state;
+    }
+
+    get zip(): string {
+        return this._zip;
+    }
 }
